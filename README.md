@@ -20,3 +20,10 @@ npm install -g expo-cli
 The [libraries](https://github.com/facebook/react-native) are pending
 
 ## Testing
+### a.
+To ensure the testing is meaningful, React Native is using [Istanbul](https://istanbul.js.org/）a JS code coverage tool to do the code coverage.
+### b and c.
+React Native is using [CircleCI](https://circleci.com/) and [AppVeyor](https://www.appveyor.com/) to do the Continuous Integration.
+* CircleCI: Support Docker, Linux, Android, and all apple devices(including macOS, iOS, tvOS, and watchOS).
+* AppVeyor: Support Windows and Linux.
+
