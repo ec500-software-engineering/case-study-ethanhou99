@@ -8,8 +8,15 @@ The coding language I'm using is JavaScript with React. If the project is starte
 To build a React Native App, you'll need:
 * Node.js package manager ([npm](https://www.npmjs.com/))
 * [Node 8+](https://nodejs.org/en/download/)
-* Expo CLI
+* React Native command line interface: Expo CLI
 ```
 Installing by:
 npm install -g expo-cli
 ```
+* Java Development Kit (JDK 8 or newer)
+* Built-in emulator in [Android Studio](https://developer.android.com/studio/)
+* IDE (I prefer [VScode](https://code.visualstudio.com/))
+### c.
+The [libraries](https://github.com/facebook/react-native) are pending
+
+## Testing
