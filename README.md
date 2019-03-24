@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
 AppRegistry.registerComponent('AwesomeProject', () => FlatListBasics);
 ```
 And here is the result:
+
 <img src="https://github.com/ec500-software-engineering/case-study-ethanhou99/blob/master/Demoimg.png" />
 
 ## Reference
