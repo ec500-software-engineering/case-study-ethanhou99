@@ -28,6 +28,12 @@ React Native is using [CircleCI](https://circleci.com/) and [AppVeyor](https://w
 * AppVeyor: Support Windows and Linux.
 
 ## 3. Software Architecture
+
+Firstly I want to introduce the concept of component. Sometimes it is a challange to build a website or create a mobile app. React Native provides a simple solution tp simplelify thr design progress by using components. Imagine the login page of the application, there are some input boxes, an 'login' button and a 'return' button, each one of these can be designed as a component. By this solution, a big complicated project can be separated to many small components, it is much easier for the developers to design a project and it is also easier for them to maintenance their product
+
+<img src="https://rationalappdev.com/wp-content/uploads/2017/08/Components-1.png" />
+* An example of components in a block-chain app.
+
 Instead of rendering to the browser’s DOM, React Native invokes Objective-C APIs to render to iOS components, or Java APIs to render to Android components. This sets React Native apart from other cross-platform app development options, which often end up rendering web-based views.
 
 The way of realize these functions is because of the “bridge,” which provides React with an interface into the host platform’s native UI elements. The bridge is the concept that provides a way for bidirectional and asynchronous communications between these two universes. 
@@ -39,6 +45,54 @@ Although React Native and operation Systems are completely written in different 
 <img src="https://cdn-images-1.medium.com/max/800/1*sucxk9LMqW9booBv4f02cg.png" />
 
 Currently, React Native only supports iOS and Android, but in theory introduced above, it can also support other operation systems as long as you write correct bridges.
+
+## 4. Defects
+
+## 5. Demonstration Application
+This is a simple demonstration, the following code renders a list of names to the mobile app
+```
+import React, { Component } from 'react';
+import { AppRegistry, FlatList, StyleSheet, Text, View } from 'react-native';
+
+export default class FlatListBasics extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={[
+            {key: 'Devin'},
+            {key: 'Jackson'},
+            {key: 'James'},
+            {key: 'Joel'},
+            {key: 'John'},
+            {key: 'Jillian'},
+            {key: 'Jimmy'},
+            {key: 'Julie'},
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+})
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => FlatListBasics);
+```
+And here is the result:
+<img src="https://github.com/ec500-software-engineering/case-study-ethanhou99/blob/master/Demo.png" />
 
 ## Reference
 * https://www.oreilly.com/library/view/learning-react-native/9781491929049/ch01.html
