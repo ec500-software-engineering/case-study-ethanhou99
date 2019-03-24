@@ -30,7 +30,11 @@ React Native is using [CircleCI](https://circleci.com/) and [AppVeyor](https://w
 ## 3. Software Architecture
 Instead of rendering to the browser’s DOM, React Native invokes Objective-C APIs to render to iOS components, or Java APIs to render to Android components. This sets React Native apart from other cross-platform app development options, which often end up rendering web-based views.
 
-The way of realize these functions is because of the “bridge,” which provides React with an interface into the host platform’s native UI elements. The bridge is the concept that provides a way for bidirectional and asynchronous communications between these two universes. Although they are completely written in different technologies, they are able to communicate. React components return markup from their render function, which describes how they should look. With React for the Web, this translates directly to the browser’s DOM. For React Native, this markup is translated to suit the host platform, so a <View> might become an Android-specific TextView.
+The way of realize these functions is because of the “bridge,” which provides React with an interface into the host platform’s native UI elements. The bridge is the concept that provides a way for bidirectional and asynchronous communications between these two universes. 
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*JT_Smf1u3fJTBY8ev9WAzg.png" />
+
+Although React Native and operation Systems are completely written in different technologies, they are able to communicate. React components return markup from their render function, which describes how they should look. With React for the Web, this translates directly to the browser’s DOM. For React Native, this markup is translated to suit the host platform, so a <View> might become an Android-specific TextView.
   
 <img src="https://cdn-images-1.medium.com/max/800/1*sucxk9LMqW9booBv4f02cg.png" />
 
