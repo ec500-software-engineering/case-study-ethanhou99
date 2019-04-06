@@ -54,6 +54,23 @@ The calculator can calculate basic equations and here is the result:
 
 <img src="https://github.com/ec500-software-engineering/case-study-ethanhou99/blob/master/calculator.png" />
 
+To run the calculator, you need to download xcode and ios simulator to your laptop.
+Then install the React Native:
+
+Assuming that you have `Node 10+` installed, you can use npm to install the Expo CLI command line utility:
+```
+npm install -g expo-cli
+```
+Then run the following commands to create a new React Native project called "AwesomeProject":
+
+```
+expo init AwesomeProject
+
+cd AwesomeProject
+npm start # you can also use: expo start
+```
+This will start a development server for you.
+
 ## Reference
 * https://www.oreilly.com/library/view/learning-react-native/9781491929049/ch01.html
 * https://www.quora.com/How-does-React-Native-work
