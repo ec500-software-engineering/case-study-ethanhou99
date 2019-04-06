@@ -48,52 +48,11 @@ Currently, React Native only supports iOS and Android, but in theory introduced 
 
 ## 4. Defects
 
-## 5. Demonstration Application
-This is a simple demonstration, the following code renders a list of names to the mobile app
-```
-import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, View } from 'react-native';
+## 5. Demonstration Application - Calculator
 
-export default class FlatListBasics extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={[
-            {key: 'Devin'},
-            {key: 'Jackson'},
-            {key: 'James'},
-            {key: 'Joel'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        />
-      </View>
-    );
-  }
-}
+The calculator can calculate basic equations and here is the result:
 
-const styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   paddingTop: 22
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
-  },
-})
-
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => FlatListBasics);
-```
-And here is the result:
-
-<img src="https://github.com/ec500-software-engineering/case-study-ethanhou99/blob/master/Demoimg.png" />
+<img src="https://github.com/ec500-software-engineering/case-study-ethanhou99/blob/master/calculator.png" />
 
 ## Reference
 * https://www.oreilly.com/library/view/learning-react-native/9781491929049/ch01.html
