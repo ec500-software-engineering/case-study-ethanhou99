@@ -7,15 +7,18 @@ export default class App extends React.Component {
     this.state = {
       resultText: ""
     }
+    this.operations = ['C', '+', '-', '*', '/']
   }
 
   calculateResult() {
     const text = this.state.resultText
+    //if(text.)
   }
 
   buttonPressed(text) {
 
     if(text == '=') {
+
       return this.calculateResult()
     }
     this.setState({
@@ -30,6 +33,19 @@ export default class App extends React.Component {
           text.pop()
           this.setState({
             resultText: text.join('')
+          })
+          break
+      case '+':
+      case '-':
+      case '*':
+      case '/':
+          const lastChar = this.state.resultText.split('').pop()
+          if (this.operations.indexOf(lastChar) > 0) return
+          if (this.state.text == "") {
+            return
+          }
+          this.setState({
+            resultText: this.state.resultText + operation
           })
     }
   }
@@ -48,12 +64,12 @@ export default class App extends React.Component {
       rows.push(<View style={styles.row}>{row}</View>)
     }
 
-    let operations = ['C', '+', '-', '*', '/']
+    
     let opts = []
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
       opts.push(
         <TouchableOpacity style = {styles.btn} onPress={() => this.operate(operations[i])}>
-          <Text style = {[styles.btntext, styles.white]}>{operations[i]}</Text>
+          <Text style = {[styles.btntext, styles.white]}>{this.operations[i]}</Text>
         </TouchableOpacity>
       )
     }
