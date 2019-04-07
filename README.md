@@ -47,6 +47,20 @@ Although React Native and operation Systems are completely written in different 
 Currently, React Native only supports iOS and Android, but in theory introduced above, it can also support other operation systems as long as you write correct bridges.
 
 ## 4. Defects
+1. [Issue #24112](https://github.com/facebook/react-native/issues/24112)
+In this issue, when people create a new project using "react-native init test" and run using "react-native run-android". The project was succesfully compiled but when it starts the React Native will response error code 500. This issue happens from React Native@ 0.58.6 to 0.59.1.
+
+A temporary solution is run `react-native start --reset-cache` in one terminal and left it open and run `react-native run-android` in another terminal. This issue requires a architecture change and had been fixed over [there](https://github.com/facebook/react-native/commit/392b0845ce624de0632721c67d349455e5029715#diff-fe2ea122979e8bb9729dff893828ae61)).
+
+2. [Issue #24107](https://github.com/facebook/react-native/issues/24107)
+In this issue, while people initializing a new React Native project using `react-native init`, the system will response:
+
+<img src="https://user-images.githubusercontent.com/30745904/54856212-01fad580-4d02-11e9-9897-ddc73bb5a7c9.PNG" />
+
+This issue happends in the version of 0.59.1, and a temporary solution is using command  `react-native init awesomeApplication --version "0.58.6"` .
+
+This issue doesn't require architecture change and had been fixed over [there](https://github.com/react-native-community/react-native-cli/commit/e0f67e097367a922524fe4f144a2355306285456)
+
 
 ## 5. Demonstration Application - Calculator
 
